@@ -1,0 +1,327 @@
+*{
+	/*border: 1px solid black;*/
+	box-sizing: border-box;
+	font-family: calibri;
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow-x: hidden;
+}
+div.contact-div{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	background-color: black;
+}
+li{
+	list-style: none;
+}
+/*header*/
+
+/*nav*/
+a.navbar-brand{
+	font: 4.5em Edwardian Script ITC;
+}
+ul.navbar-nav{
+	margin-left: 40%;
+}
+/*nav-item animation*/
+ul.navbar-nav li.nav-item{
+	position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+ul.navbar-nav li.nav-item:before, ul.navbar-nav li.nav-item:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 110%;
+    border: 3.5px solid #707070;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+ul.navbar-nav li.dropdown-navitem:before, ul.navbar-nav li.dropdown-navitem:after{
+	left: 47%;
+}
+ul.navbar-nav li.nav-item:after{
+    border-width: 2px;
+    transition: all 0.6s;
+    border: 3.5px solid #d6d6d6;
+}
+ul.navbar-nav li.nav-item:hover:before{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+ul.navbar-nav li.nav-item:hover:after{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+/*intro banner*/
+div.intro-div{
+	width: 93.5%;
+	margin-top: 7%;
+	margin-left: 6.6%;
+}
+img#header-bgimg{
+	position: relative;
+}
+span.intro-text, span.explore-text{
+	position: absolute;
+}
+span.intro-text{
+	top: 30%;
+	left: 25%;
+}
+span.intro-text h3{
+	font: 7.7em Bahnschrift SemiBold;
+}
+span.explore-text{
+	bottom: -22%;
+	left: 48%;
+}
+
+/*photo section*/
+div.profile-div{
+	margin-left: 6.5%;
+}
+img.profile-img{
+	filter: blur(3px);
+	width: 60%;
+	margin-left: 18%;
+	cursor: pointer;
+}
+img.profile-img:hover{
+	filter: blur(0);
+}
+
+/*section*/
+section.section, footer.footer{
+	margin-left: 6.6%;
+	width: 93.4%;
+}
+section.section{
+	background-color: #fafafa;
+}
+
+/*about*/
+.aboutme{
+	font-size: 4em;
+	transition: all 0.6s;
+}
+.aboutme:hover span.for-effect{
+	opacity: 1;
+}
+.aboutme:hover{
+	font-size: 3.92em;
+	opacity: 0.2;
+}
+.about-p-div p, .text-service p{
+	font-size: 1.5em;
+	word-spacing: 0.51vh;
+	letter-spacing: 0.056vh;
+}
+.about-p-div p span{
+	cursor: pointer;
+}
+
+div#about{
+	background: linear-gradient(188deg, #d1d1d1, #dcdef2, #efe6f0, #f2e6ee, #f3f2f5, #fafafa);
+}
+span.for-effect{
+	opacity: 0;
+}
+
+/*service*/
+div#service{
+	background-color: #050505;
+}
+h2.service-h{
+	font: 5em Cascadia Mono SemiBold;
+	background: -webkit-linear-gradient(#85a9ff, #f185ff, #ff85c2, #ff85c2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*websites*/
+div.website{
+	cursor: pointer;
+}
+.Gp-pj-h, .id-pj-h{
+	font-size: 3em;
+}
+img.websites-img{
+	width: 50%;
+	height: 50%;
+}
+img.website-img-msg{
+	height: 100%;
+}
+.website-text{
+	color: black;
+	font-size: 2em;
+	transition: all 0.5s;
+}
+.website-text:hover{
+	color: #36383b;
+	font-size: 1.96em;
+}
+
+/*overlay effect*/
+.overlay-container{
+	position: relative;
+}
+.overlay-div{
+	position: absolute;
+	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	background-color: black;
+  	overflow: hidden;
+  	width: 0;
+  	height: 100%;
+  	transition: .4s ease;	
+}
+.overlay-container:hover .overlay-div{
+  width: 100%;
+  opacity: 0.79;
+}
+.overlay-text{
+  	color: white;
+  	font-size: 2em;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+  	white-space: nowrap;
+}
+
+
+/*footer*/
+h1.contact-me{
+	font: 3em cambria;
+}
+/*form*/
+
+a .fa-instagram{
+	color: #ff0062;
+}
+a .fa-viber{
+	color: #6f00ff;
+}
+a .fa-twitter{
+	color: #00fff7;
+}
+a .fa-snapchat{
+	color: #ffb300;
+}
+.contact-ph p{
+	filter: blur(2px);
+}
+.contact-ph p:hover{
+	filter: blur(0);
+}
+
+div.msg-to{
+	width: 40%;
+}
+
+.icon-container li a{
+	font-size: 2em;
+}
+.icon-container li a i:hover{
+	color: white;
+}
+.msg{
+	height: 20vh;
+}
+p.msg-to-p{
+	font-size: 2.5em;
+	transition: all 0.7s;
+}
+p.msg-to-p:hover{
+	font-size: 2.6em;
+}
+
+
+/*contact-div*/
+a.go-to-top-a{
+	display: block;
+	margin-top: 18vh;
+}
+.contact-container li a{
+	transition: all 1s;
+}
+.contact-container li a .fa-snapchat:hover{
+    text-shadow: 0.5vh 0.5vh #ffb300;
+}
+.contact-container li a .fa-twitter:hover{
+    text-shadow: 0.5vh 0.5vh #00fff7;
+}
+.contact-container li a .fa-facebook:hover{
+    text-shadow: 0.5vh 0.5vh blue;
+}
+.contact-container li a .fa-viber:hover{
+    text-shadow: 0.5vh 0.5vh #6f00ff;
+}
+.contact-container li a .fa-instagram:hover{
+    text-shadow: 0.5vh 0.5vh #ff0062;
+}
+div.contact-div{
+	width: 6.6%;
+	/*border: 1px solid white;*/
+}
+
+/*responsive design*/
+
+@media (max-width: 1000px){
+	div.intro-div{
+		padding: 5% 0;
+		margin-top: 13%;
+		margin-left: 6.6%;
+		position: static;
+	}
+	div.msg-to{
+		width: 99%;
+	}
+	div.intro-div, div.profile-div, section.section, footer.footer{
+		margin-left: 0;
+		width: 100%;
+	}
+	ul.navbar-nav li.nav-item:hover:before, ul.navbar-nav li.nav-item:hover:after{
+		opacity: 0;
+	}
+	ul.navbar-nav li.nav-item:hover{
+		border-bottom: 2px solid floralwhite;
+	}
+
+	span.intro-text-rsp h3{
+		font: 5.5em Bahnschrift SemiBold;
+	}
+}
+@media (max-width: 600px){
+	div.intro-div{
+		margin-top: 20%;
+	}
+	span.intro-text-rsp h3{
+		font: 3em Bahnschrift SemiBold;
+	}
+}
+@media (max-width: 500px){
+	.aboutme, h2.service-h{
+		font-size: 3.3em;
+	}
+	div.intro-div{
+		margin-top: 30%;
+	}
+}
